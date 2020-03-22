@@ -6,4 +6,14 @@ from app import app
 def index():
     print("Return HTML page using template.")
     user = {'username': 'Practice Habits'}
-    return render_template('index.html', title='Home', user=user)
+    posts = [
+        {
+            'author': {'username': 'John'},
+            'body': 'Beautiful day in Portland!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]    
+    return render_template('index.html', title='Home', user=user, posts=posts)
