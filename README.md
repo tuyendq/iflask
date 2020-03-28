@@ -18,6 +18,11 @@ For more information, please see the [Python on App Service quickstart](https://
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+
+---
+From the running sample app, let's continue with Flask Mega Tutorial by Miguel Grinberg
+---
+
 # Flask Mega Tutorial by Miguel Grinberg
 [Miguel Grinberg](https://blog.miguelgrinberg.com/author/Miguel%20Grinberg)
 [The Flask Mega Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
@@ -26,8 +31,10 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 
 ## Connect to mysqlremote.com
+From Chapter 5 (User Logins), when deploying to Microsoft Azure App Service (Free Tier) I ran into error when registering new user. So I switch from sqlite to MySQL database, using the free service [https://remotemysql.com/](https://remotemysql.com/).
 - Register free account at [https://remotemysql.com/](https://remotemysql.com/)
-- Sign in and create a new database. Take note about newly created database to update DATABASE_URL in .env file
+- Sign in and create a new database. Take note of newly created database (databasename, username, password, port) to update DATABASE_URL in .env file (on local dev) and Settings > Configuration (on Azure Web App)
+
 ```
 DATABASE_URL=mysql+pymysql://username:password@remotemysql.com:3306/databasename?charset=utf8m4
 ```
