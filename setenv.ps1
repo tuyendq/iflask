@@ -1,0 +1,1 @@
+Set-Item Env:FLASK_APP ".\application.py"
